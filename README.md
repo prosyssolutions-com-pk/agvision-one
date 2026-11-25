@@ -67,3 +67,28 @@ samples, guidance on mobile development, and a full API reference.
 │     Vision AI      │      6. Update Row (Name, Grade, Texture Score)
 └────────────────────┘
 ```
+## ⚙️ Local Setup & Environment Security
+
+This project uses `--dart-define-from-file` so API credentials are never hardcoded in source control.
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com
+   cd agvision-one
+   ```
+2. **Install Flutter packages:**
+   ```bash
+   flutter pub get
+   ```
+3. **Create a local `env.json` file in the project root (ignored by Git):**
+   ```json
+   {
+     "GEMINI_API_KEY": "your_google_ai_studio_key",
+     "SUPABASE_URL": "your_supabase_project_url",
+     "SUPABASE_ANON_KEY": "your_supabase_anon_key"
+   }
+   ```
+4. **Run the app with environment keys injected:**
+   ```bash
+   flutter run --dart-define-from-file=env.json
+   ```
