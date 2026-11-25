@@ -47,4 +47,23 @@ samples, guidance on mobile development, and a full API reference.
 4. **Switch Currency (`PKR` / `USD`):** Tap the **`PKR / USD`** pill in the top bar to convert all batch totals and unit rates between Pakistani Rupees and US Dollars in real time.
 5. **Manage Cloud Records:** Pull down to refresh live database logs, or tap the **red trash icon (`🗑️`)** on any card to permanently delete both the database record and cloud photo.
 
+## 🏗️ System Architecture (Upload-First, Scan-Second)
 
+```text
+┌────────────────────┐      1. Compress & Upload (~60KB)      ┌─────────────────────────┐
+│                    │ ─────────────────────────────────────► │    Supabase Storage     │
+│   Flutter Mobile   │                                        │   (veg_fruit_scans)     │
+│        App         │ ◄───────────────────────────────────── └─────────────────────────┘
+│   (AgVision.dart)  │      2. Return Public Image URL                     │
+│                    │                                                     ▼
+│                    │      3. Insert Initial Log Row         ┌─────────────────────────┐
+│                    │ ─────────────────────────────────────► │  Supabase PostgreSQL    │
+└────────────────────┘                                        │     (sorting_logs)      │
+          │                                                   └─────────────────────────┘
+          │ 4. Send ~15KB Thumbnail                                        ▲
+          ▼                                                                │
+┌────────────────────┐      5. Structured JSON Verdict                     │
+│   Google Gemini    │ ────────────────────────────────────────────────────┘
+│     Vision AI      │      6. Update Row (Name, Grade, Texture Score)
+└────────────────────┘
+```
