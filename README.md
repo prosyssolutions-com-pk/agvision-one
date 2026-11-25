@@ -88,4 +88,10 @@ This project uses `--dart-define-from-file` so API credentials are never hardcod
    ```bash
    flutter run --dart-define-from-file=env.json
    ```
-#Photos
+# Photos
+| ![history diagram](./screenshots/history_diagram.jpg)  | ![history diagram](./screenshots/scan_diagram.jpg)  |   |   |   |
+|---|---|---|---|---|
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+
