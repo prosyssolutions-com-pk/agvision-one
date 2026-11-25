@@ -25,3 +25,26 @@ samples, guidance on mobile development, and a full API reference.
 ![License](https://shields.io)
 
 **AgVision One** is an end-to-end mobile quality-control and commercial valuation platform built for wholesale agricultural markets, packing houses, and export sorting facilities. Using **Google Gemini Vision AI** and **Supabase**, it grades fruits and vegetables in seconds and calculates real-time batch valuations in **PKR (`Rs.`)** and **USD (`$`)**.
+
+## 📖 How to Use AgVision One (Step-by-Step Guide)
+
+### 1. Scan & Grade Produce (`AgVision` Screen)
+1. **Aim the Camera:** Point your phone's rear camera at a fruit, vegetable, or sample crate in clear lighting.
+2. **Tap "Scan Produce":** The app immediately compresses and uploads the image to **Supabase Storage** first (preventing data loss on weak mobile networks).
+3. **Review AI Verdict:** Within seconds, **Google Gemini Vision AI** analyzes surface texture, blemishes, and ripeness, displaying a color-coded result banner:
+   * 🟢 **Grade A (90%–100% Texture Score):** Export-grade quality with zero visible defects.
+   * 🟠 **Grade B (70%–89.9% Texture Score):** Minor surface marks or slight unevenness; suitable for local retail.
+   * 🔴 **Reject (<70% Texture Score):** Bruised, moldy, sprouting, blurry, or non-produce items.
+
+### 2. Calculate Commercial Batch Value (`Scan History` Screen)
+1. **Open Scan History:** Tap the **History icon (`🕒`)** in the top-right corner of the scanner screen.
+2. **Filter by Commodity or Grade:**
+   * Tap a commodity chip (**`All Items`**, **`Garlic`**, **`Potato`**, **`Apple`**, etc.) to isolate a specific produce lot and recalculate its financial total independently.
+   * Tap a grade chip (**`All`**, **`Grade A`**, **`Grade B`**, **`Reject`**) to inspect specific quality tiers.
+3. **Set Market Rates & Units (`⚙️`):**
+   * Tap the **Settings gear (`⚙️`)** (or tap any colored grade card) to select your pricing unit (**`Per Crate`**, **`Per Kg`**, or **`Per Ton`**).
+   * Enter current market rates in **PKR (`Rs.`)** and update the **USD Exchange Rate** (e.g., `1 USD = 278.50 PKR`), then tap **Update Totals**.
+4. **Switch Currency (`PKR` / `USD`):** Tap the **`PKR / USD`** pill in the top bar to convert all batch totals and unit rates between Pakistani Rupees and US Dollars in real time.
+5. **Manage Cloud Records:** Pull down to refresh live database logs, or tap the **red trash icon (`🗑️`)** on any card to permanently delete both the database record and cloud photo.
+
+
