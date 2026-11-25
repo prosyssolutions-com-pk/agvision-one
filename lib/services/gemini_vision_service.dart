@@ -4,7 +4,7 @@ import 'package:flutter_image_compress/flutter_image_compress.dart';
 import 'package:http/http.dart' as http;
 
 class GeminiVisionService {
-  static const String _apiKey = 'GEMINI_API_KEY';
+  static const String _apiKey = String.fromEnvironment('GEMINI_API_KEY');
 
   static Future<Map<String, dynamic>> analyzeProduce(File imageFile) async {
     // 1. Compress to ~15 KB so the network upload completes in ~1 second
