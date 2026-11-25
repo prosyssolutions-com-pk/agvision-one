@@ -94,4 +94,5 @@ This project uses `--dart-define-from-file` so API credentials are never hardcod
 | ![set rate](./screenshots/scan-history-usd.jpeg)  | ![rate in rupee](./screenshots/scan-history-pkr.jpeg)  |   |   |   |   
 |   |   |   |   |   |
 | ![rate](./screenshots/rate.jpeg)  | ![rate](./screenshots/splash.jpg)  |   |   |   |
-|   |   | ![service diagram](./screenshots/service_diagram.jpg)  |   |   |
+|   |   |   |   |   |
+| ![service diagram](./screenshots/service_diagram.jpg)  |   |   |   |   |
