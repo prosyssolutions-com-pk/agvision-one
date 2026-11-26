@@ -18,6 +18,8 @@ samples, guidance on mobile development, and a full API reference.
 
 # 🌱 AgVision One — AI-Powered Agricultural Produce Quality & Valuation Scanner
 
+> 📲 **Try the Live Android App:** **[Download AgVision One v1.0.0 (APK)](https://github.com)** *(Android 8.0+)*
+
 **`🔵 Flutter 3.x`** • **`🎯 Dart 3.x`** • **`✨ Google Gemini Vision AI`** • **`🟢 Supabase PostgreSQL & Storage`** • **`📄 MIT License`**
 
 **AgVision One** is an end-to-end mobile quality-control and commercial valuation platform built for wholesale agricultural markets, packing houses, and export sorting facilities. Using **Google Gemini Vision AI** and **Supabase**, it grades fruits and vegetables in seconds and calculates real-time batch valuations in **PKR (`Rs.`)** and **USD (`$`)**.
